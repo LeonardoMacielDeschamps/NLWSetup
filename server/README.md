@@ -1,0 +1,3 @@
+## NLW Setup
+
+Aplicação construída através do evento NLW Setup - Trilha Ignite, utilizando ferramentas como NodeJS, Fastify, Prisma, ReactJS, React Native, Tailwind, entre outros...
