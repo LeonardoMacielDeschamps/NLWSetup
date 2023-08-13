@@ -37,7 +37,7 @@ export function SummaryTable() {
   }, []);
 
   return (
-    <div className='w-full flex overflow-auto pb-3'>
+    <div className='w-full flex overflow-auto py-3'>
       <div className='grid grid-rows-7 grid-flow-row gap-3'>
         {
           weekDays.map((weekDay, index) => {
@@ -55,7 +55,7 @@ export function SummaryTable() {
 
       <div className='grid grid-rows-7 grid-flow-col gap-3'>
         {
-          summaryDates.map(date => {
+          summary.length > 0 && summaryDates.map(date => {
             const dayInSummary = summary.find(day => {
               return dayjs(date).isSame(day.date, 'day');
             });
@@ -65,7 +65,7 @@ export function SummaryTable() {
                 key={date.toString()}
                 date={date}
                 amount={dayInSummary?.amount}
-                completed={dayInSummary?.completed}
+                defaultCompleted={dayInSummary?.completed}
               />
             );
           })
